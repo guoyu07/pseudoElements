@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pseudo Elements </title>
+    <style type="text/css">
+      *{
+        margin:0;
+        padding: 0;
+      }
+      body{
+        background: #ccd3d7;
+      }
+      .stackone{
+        width: 200px;
+        height: 200px;
+        float: left;
+        border: 6px solid #fff;
+        margin: 50px;
+        position: relative;
+        -webkit-box-shadow:2px 2px 5px rgba(0,0,0,0.3);
+        -moz-box-shadow:2px 2px 5px rgba(0,0,0,0.3);
+        box-shadow:2px 2px 5px rgba(0,0,0,0.3);
+      }
+      .stackone img{
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+      }
+      .stackone::before{
+        content: '';
+        height: 200px;
+        width: 200px;
+        background: #eff4de;
+        border: 6px solid #fff;
+        -webkit-box-shadow:2px 2px 5px rgba(0,0,0,0.3);
+        -moz-box-shadow:2px 2px 5px rgba(0,0,0,0.3);
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        position: absolute;
+        z-index: -1;
+        top: 0px;
+        left: -10px;
+        -webkit-transform:rotate(-5deg);
+        -moz-transform:rotate(-5deg);
+        -moz-transform:rotate(-5deg);
+        -ms-transform:rotate(-5deg);
+        transform:rotate(-5deg);
+      }
+      .stackone:after {
+      	content: "";
+      	height: 200px; width: 200px;
+      	background: #768590;
+      	border: 6px solid #fff;
+      	position: absolute;
+      	z-index: -1;
+      	top: 5px;
+      	left: 0px;
+      	-webkit-box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+      	-moz-box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+      	box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+      	-webkit-transform: rotate(4deg);
+      	-moz-transform: rotate(4deg);
+      	-o-transform: rotate(4deg);
+      	-ms-transform: rotate(4deg);
+      	transform: rotate(4deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stackone">
+      <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1221721020,3438798218&fm=27&gp=0.jpg"/>
+    </div>
+  </body>
+</html>
